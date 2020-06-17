@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>ASL Translate</title>
+    <style>
+     html {
+       background-color: #00FFFF;
+       font-family: Arial;
+     }
+     .h1 {
+       font-size: 28px;
+     }
+     .p {
+       font-style: italics;
+     }
+     .button {
+        background-color: #23E000;
+        border: none;
+        color: black;
+        padding: 2px 4px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+      input[type="file"] {
+        display: none;
+      }
+    </style>
+	</head>
+	<body>
+    <h1>ASL Translate</h1>
+    <p>Submit your ASL Image here and we'll translate it for you!</p>
+		<div class="asl">
+      <form name="inquiry" action="{{ url_for('index')}}" method="POST">
+        <input type="file" id="ASL" name="ASL" class="button" multiple>
+        <label for="asl" class="button">
+          <i class="fa fa-cloud-upload"></i> Choose Files
+        </label>
+        <input id="asl"name="asl" type="file"/>
+        <input type="submit" class="button" value="Submit">
+      </form>
+		</div>
+	</body>
+</html>
